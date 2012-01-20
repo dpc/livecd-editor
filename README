@@ -1,0 +1,20 @@
+This is a simple Makefile that implements everything one needs to customize
+Ubuntu/Debian based LiveCD.
+
+
+It expects `ubuntu.iso` file and will produce `ubuntu-custom.iso`.
+
+To use:
+
+	sudo make <target>
+
+The target may be:
+
+* `enter` - will put you into a chroot shell with extracted cd as environment
+  that you can edit
+* `iso` (the default) - will build the `ubuntu-custom.iso` cd from what you've
+  edited
+* `test` - will try to run that CD using qemu for you to test it
+
+The resulting `ubuntu-custom.iso` can be used in the future as a base image
+(`ubuntu.iso`).
